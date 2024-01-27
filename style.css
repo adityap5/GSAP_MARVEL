@@ -1,24 +1,26 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-html,body{
+html,body {
     height: 100%;
     width: 100%;
     font-family: 'Geologica', sans-serif;
 }
-.page1{
-height: 100vh;
-width: 100%;
-background-color: rgb(49, 49, 49);
-position: relative;
+
+.page1 {
+    height: 100vh;
+    width: 100%;
+    background-color: rgb(49, 49, 49);
+    position: relative;
 }
-.cursor{
+
+.cursor {
     height: 7.5vw;
     width: 7.5vw;
-    background-color:#EE171F;
+    background-color: #EE171F;
     border-radius: 50%;
     position: fixed;
     z-index: 9;
@@ -28,56 +30,94 @@ position: relative;
     color: #fff;
     transform: translate(-50%, -50%);
 }
-.cursor h5{
+
+.cursor h5 {
     position: relative;
     font-size: 1rem;
 }
-.page1 video{
+
+.page1 video {
     height: 100%;
     width: 100%;
-    object-fit:cover;
+    object-fit: cover;
     position: absolute;
 }
-.page1-content{
+
+.page1-content {
     height: 100%;
     width: 100%;
     position: relative;
-    color : white;
+    color: white;
     z-index: 10;
 }
-nav{
+
+nav {
     height: 50px;
     width: 100%;
     padding: 3vw 4vw;
     display: flex;
-    justify-content:space-between;
+    justify-content: space-between;
     align-items: center;
-    font-size:20px;
+    font-size: 20px;
     font-weight: 500;
-    
+
 }
-.nav-left img{
+
+.nav-left img {
     height: 44px;
     width: 80px;
     padding-top: 4px;
     cursor: pointer;
 
 }
-.nav-middle ul{
-    display:flex;
+
+.nav-middle ul {
+    display: flex;
     list-style: none;
-    gap:18px;
+    gap: 18px;
     cursor: pointer;
 }
-.page1 .text{
+
+.page1 .text {
     position: absolute;
     bottom: 0;
     font-size: 22rem;
     padding-left: 1rem;
 }
-.page2{
+
+.page2 {
     height: 100vh;
     width: 100%;
     background-color: rgb(121, 121, 121);
-  
-    }
+    position: relative;
+    padding: 5vw 2.8vw;
+}
+
+.page2-top {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    padding-bottom: 1.2vw;
+    margin-bottom: 1.2vw;
+    border-bottom: 1px solid #00000092
+}
+
+.page2-top h3 {
+    font-size: 1.7vw;
+    font-weight: 500;
+    width: 26%;
+}
+
+.page2-top h4 {
+    font-size: 1.7vw;
+    font-weight: 500;
+}
+
+.elem {
+    overflow: hidden;
+}
+
+.elem h1 {
+    font-size: 4.2vw;
+    font-weight: 500;
+}
