@@ -119,6 +119,13 @@ tl.to(".loader h3",{
 tl.to(".loader",{
   opacity:0
 })
+tl.from(".page1 .text h1",{
+  y:100,
+  stagger:0.1,
+  opacity:0,
+ duration:0.5,
+ delay:-0.5
+})
 tl.to(".loader",{
   display: "none"
 })
@@ -127,8 +134,3 @@ tl.to(".loader",{
 //   stagger:0.1,
 
 // })
-tl.from(".page1 .text h1",{
-  y:680,
-  stagger:0.1,
- duration:0.5
-})
