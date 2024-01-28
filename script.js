@@ -24,7 +24,6 @@ page1content.addEventListener("mouseenter",function(dets){
 }
 cursoreffect()
 
-
 function locoscroll(){
     gsap.registerPlugin(ScrollTrigger);
     const locoScroll = new LocomotiveScroll({
@@ -50,20 +49,86 @@ function locoscroll(){
 }
 locoscroll()
 
-function page2animation() {
-    gsap.from(".elem h1",{
-        y:120,
-        stagger:0.2,
-        duration:1,
-        scrolltTigger:{
-              trigger :".page2",
-              sccroller:".main",
-              start:"top 40%",
-              end: "top 37%",
-              markers:true,
-              scrub:2
+function page2Animation() {
+    gsap.from(".elems h1",{
+        y: 120,
+       
+        opacity:0,
+        stagger: 0.25,
+        duration: 2,
+        scrollTrigger: {
+              trigger : ".page2",
+              scroller: ".main",
+              start: "top 40%",
+              end: "top 44%",
+            //   markers:true,
+              scrub: 2
         }
     })
+    
 }
+page2Animation()
 
-page2animation()
+function page2topAnimation() {
+    gsap.from(".page2-top h3,h4 ",{
+        y:120,
+        opacity:0,
+        stagger: 0.25,
+        duration: 1,
+        scrollTrigger: {
+              trigger : ".page2",
+              scroller: ".main",
+              start: "top 70%",
+              end: "top 60%",
+            //   markers:true,
+              scrub: 2
+        }
+    })
+    
+}
+page2topAnimation()
+
+function sliderAnimation() {
+  var swiper = new Swiper(".mySwiper", {
+    slidesPerView: 4,
+    centeredSlides: true,
+    spaceBetween: 30,
+    grabCursor: true,
+    autoplay: {
+      delay: 2500,
+      disableOnInteraction: false,
+    },
+  });
+}
+sliderAnimation() 
+
+var tl = gsap.timeline()
+
+tl.from(".loader h3",{
+  x:20,
+  opacity:0,
+  duration: .5,
+  stagger:0.2,
+})
+tl.to(".loader h3",{
+  x:-20,
+  opacity:0,
+  duration: .5,
+  stagger:0.1,
+})
+tl.to(".loader",{
+  opacity:0
+})
+tl.to(".loader",{
+  display: "none"
+})
+// tl.from(".nav-middle ul li",{
+//   y:-80,
+//   stagger:0.1,
+
+// })
+tl.from(".page1 .text h1",{
+  y:680,
+  stagger:0.1,
+ duration:0.5
+})
